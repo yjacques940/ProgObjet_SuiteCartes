@@ -36,10 +36,8 @@
             this.card4Label = new System.Windows.Forms.Label();
             this.card5Label = new System.Windows.Forms.Label();
             this.buttonNextSuite = new System.Windows.Forms.Button();
-            this.buttonNextSuite = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
-            this.buttonNextSuite = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.timeRemainingGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -163,8 +161,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
-            this.Controls.Add(this.buttonNextSuite);
-            this.Controls.Add(this.buttonNextSuite);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonNextSuite);
             this.Controls.Add(this.card5Label);
