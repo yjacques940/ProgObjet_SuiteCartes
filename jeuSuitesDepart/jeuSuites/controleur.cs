@@ -10,6 +10,8 @@ namespace jeuSuites
     {
         Minuterie tempsJeu;
         public SuiteCartes suiteModele;
+        int nombreMaxDeCartes = 5;
+        int nombreActuelDaffichageDeSuites = 0;
         public int nombreDeSuitesGenerees = 1;
         int nombreMaximalDeSuitesGenerees = 5;
 
@@ -56,6 +58,11 @@ namespace jeuSuites
         public void AugmenterNombreDeSuiteGeneree()
         {
             nombreDeSuitesGenerees++;
+        }
+
+        public void GenererNouvelleSuiteDeCarte()
+        {
+            suiteModele.GenererNouvelleSuiteCarte(nombreMaxDeCartes);
         }
     }
 }
