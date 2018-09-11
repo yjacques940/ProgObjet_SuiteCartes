@@ -35,6 +35,7 @@
             this.card3Label = new System.Windows.Forms.Label();
             this.card4Label = new System.Windows.Forms.Label();
             this.card5Label = new System.Windows.Forms.Label();
+            this.buttonNextSuite = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
             this.buttonNextSuite = new System.Windows.Forms.Button();
@@ -107,6 +108,16 @@
             this.card5Label.TabIndex = 7;
             this.card5Label.Text = "carte5";
             // 
+            // buttonNextSuite
+            // 
+            this.buttonNextSuite.Location = new System.Drawing.Point(322, 241);
+            this.buttonNextSuite.Name = "buttonNextSuite";
+            this.buttonNextSuite.Size = new System.Drawing.Size(105, 23);
+            this.buttonNextSuite.TabIndex = 8;
+            this.buttonNextSuite.Text = "prochaine suite";
+            this.buttonNextSuite.UseVisualStyleBackColor = true;
+            this.buttonNextSuite.Click += new System.EventHandler(this.buttonNextSuite_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nombreDeSuitesGenereesLabel);
@@ -141,6 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
+            this.Controls.Add(this.buttonNextSuite);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonNextSuite);
             this.Controls.Add(this.card5Label);
@@ -169,6 +181,7 @@
         private System.Windows.Forms.Label card3Label;
         private System.Windows.Forms.Label card4Label;
         private System.Windows.Forms.Label card5Label;
+        private System.Windows.Forms.Button buttonNextSuite;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
         private System.Windows.Forms.Button buttonNextSuite;
