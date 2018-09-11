@@ -107,26 +107,6 @@
             this.card5Label.TabIndex = 7;
             this.card5Label.Text = "carte5";
             // 
-            // buttonNextSuite
-            // 
-            this.buttonNextSuite.Location = new System.Drawing.Point(322, 241);
-            this.buttonNextSuite.Name = "buttonNextSuite";
-            this.buttonNextSuite.Size = new System.Drawing.Size(105, 23);
-            this.buttonNextSuite.TabIndex = 8;
-            this.buttonNextSuite.Text = "prochaine suite";
-            this.buttonNextSuite.UseVisualStyleBackColor = true;
-            this.buttonNextSuite.Click += new System.EventHandler(this.buttonNextSuite_Click);
-            // 
-            // buttonNextSuite
-            // 
-            this.buttonNextSuite.Location = new System.Drawing.Point(322, 241);
-            this.buttonNextSuite.Name = "buttonNextSuite";
-            this.buttonNextSuite.Size = new System.Drawing.Size(105, 23);
-            this.buttonNextSuite.TabIndex = 8;
-            this.buttonNextSuite.Text = "prochaine suite";
-            this.buttonNextSuite.UseVisualStyleBackColor = true;
-            this.buttonNextSuite.Click += new System.EventHandler(this.buttonNextSuite_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nombreDeSuitesGenereesLabel);

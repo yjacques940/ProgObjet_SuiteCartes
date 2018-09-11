@@ -12,7 +12,6 @@ namespace jeuSuites
         static Random generateurSuite = new Random();
 
         Carte[] suiteCartes = new Carte[longueurSuite];
-
         public string getCarte(int index)
         {
            return suiteCartes[index].ValeurCarte; 

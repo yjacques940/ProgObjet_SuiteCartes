@@ -65,17 +65,11 @@ namespace jeuSuites
             remainingTimeLabel.Text = leJeuDeSuite.TempsJeu.Secondes.ToString() + " secondes";
         }
 
-        private void TerminerExecution()
-        {
-            if(leJeuDeSuite.LeNombreMaximalDAffichageDeCarteAEteAtteint())
-            {
-                Close();
-            }
-        }
-
         private void buttonNextSuite_Click(object sender, EventArgs e)
         {
-            leJeuDeSuite.GenererNouvelleSuiteDeCarte();
+            leJeuDeSuite.MinuterieTerminee();
+            VerifierFinExecution();
+            AfficherInformations();
         }
 
         private void AfficherLesCartes()
