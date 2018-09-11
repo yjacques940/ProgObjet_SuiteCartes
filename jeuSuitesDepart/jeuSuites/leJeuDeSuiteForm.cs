@@ -19,12 +19,39 @@ namespace jeuSuites
             InitializeComponent();
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
+            AfficherInformations();
+        }
+
+        private void AfficherInformations()
+        {
             AfficherTempsRestant();
+            AfficherNombreDeSuiteGenerees();
+        }
+
+        private void AfficherNombreDeSuiteGenerees()
+        {
+            nombreDeSuitesGenereesLabel.Text = leJeuDeSuite.nombreDeSuitesGenerees.ToString();
         }
 
         private void AbonnerEvenement()
         {
             leJeuDeSuite.TempsJeu.SecondeTic += minuterie_SecondeTic;
+            leJeuDeSuite.TempsJeu.FinMinuterie += minuterie_FinMinuterie;
+        }
+
+        private void minuterie_FinMinuterie(object sender, EventArgs e)
+        {
+            leJeuDeSuite.MinuterieTerminee();
+            VerifierFinExecution();
+            AfficherInformations();
+        }
+
+        private void VerifierFinExecution()
+        {
+            if (leJeuDeSuite.LeNombreMaximalDAffichageDeCarteAEteAtteint())
+            {
+                Close();
+            }
         }
 
         private void minuterie_SecondeTic(object sender, EventArgs e)

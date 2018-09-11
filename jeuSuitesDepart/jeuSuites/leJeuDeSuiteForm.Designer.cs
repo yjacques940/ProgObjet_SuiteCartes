@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.remainingTimeLabel = new System.Windows.Forms.Label();
             this.timeRemainingGroupBox = new System.Windows.Forms.GroupBox();
             this.card1Label = new System.Windows.Forms.Label();
@@ -35,8 +36,13 @@
             this.card3Label = new System.Windows.Forms.Label();
             this.card4Label = new System.Windows.Forms.Label();
             this.card5Label = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.buttonNextSuite = new System.Windows.Forms.Button();
             this.timeRemainingGroupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // remainingTimeLabel
@@ -45,16 +51,16 @@
             this.remainingTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.remainingTimeLabel.Location = new System.Drawing.Point(3, 16);
             this.remainingTimeLabel.Name = "remainingTimeLabel";
-            this.remainingTimeLabel.Size = new System.Drawing.Size(86, 13);
+            this.remainingTimeLabel.Size = new System.Drawing.Size(30, 13);
             this.remainingTimeLabel.TabIndex = 1;
-            this.remainingTimeLabel.Text = "[TimeRemaining]";
+            this.remainingTimeLabel.Text = "[sec]";
             // 
             // timeRemainingGroupBox
             // 
             this.timeRemainingGroupBox.Controls.Add(this.remainingTimeLabel);
-            this.timeRemainingGroupBox.Location = new System.Drawing.Point(352, 12);
+            this.timeRemainingGroupBox.Location = new System.Drawing.Point(141, 12);
             this.timeRemainingGroupBox.Name = "timeRemainingGroupBox";
-            this.timeRemainingGroupBox.Size = new System.Drawing.Size(80, 37);
+            this.timeRemainingGroupBox.Size = new System.Drawing.Size(80, 35);
             this.timeRemainingGroupBox.TabIndex = 2;
             this.timeRemainingGroupBox.TabStop = false;
             this.timeRemainingGroupBox.Text = "Temps ";
@@ -104,6 +110,30 @@
             this.card5Label.TabIndex = 7;
             this.card5Label.Text = "carte5";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.nombreDeSuitesGenereesLabel);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(104, 35);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nombre de suites";
+            // 
+            // nombreDeSuitesGenereesLabel
+            // 
+            this.nombreDeSuitesGenereesLabel.AutoSize = true;
+            this.nombreDeSuitesGenereesLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "nombreDeSuitesGenerees", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nombreDeSuitesGenereesLabel.Location = new System.Drawing.Point(40, 16);
+            this.nombreDeSuitesGenereesLabel.Name = "nombreDeSuitesGenereesLabel";
+            this.nombreDeSuitesGenereesLabel.Size = new System.Drawing.Size(25, 13);
+            this.nombreDeSuitesGenereesLabel.TabIndex = 1;
+            this.nombreDeSuitesGenereesLabel.Text = "[nb]";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(jeuSuites.Controleur);
+            // 
             // buttonNextSuite
             // 
             this.buttonNextSuite.Location = new System.Drawing.Point(322, 241);
@@ -119,6 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonNextSuite);
             this.Controls.Add(this.card5Label);
             this.Controls.Add(this.card4Label);
@@ -127,9 +158,12 @@
             this.Controls.Add(this.card1Label);
             this.Controls.Add(this.timeRemainingGroupBox);
             this.Name = "leJeuDeSuiteForm";
-            this.Text = "Form1";
+            this.Text = "Suites de cartes";
             this.timeRemainingGroupBox.ResumeLayout(false);
             this.timeRemainingGroupBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +178,9 @@
         private System.Windows.Forms.Label card3Label;
         private System.Windows.Forms.Label card4Label;
         private System.Windows.Forms.Label card5Label;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
         private System.Windows.Forms.Button buttonNextSuite;
     }
 }
