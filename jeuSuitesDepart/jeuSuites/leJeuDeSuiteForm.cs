@@ -36,5 +36,13 @@ namespace jeuSuites
         {
             remainingTimeLabel.Text = leJeuDeSuite.TempsJeu.Secondes.ToString() + " secondes";
         }
+
+        private void TerminerExecution()
+        {
+            if(leJeuDeSuite.LeNombreMaximalDAffichageDeCarteAEteAtteint())
+            {
+                Close();
+            }
+        }
     }
 }

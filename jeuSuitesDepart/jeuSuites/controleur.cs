@@ -10,6 +10,8 @@ namespace jeuSuites
     {
         Minuterie tempsJeu;
         SuiteCartes suiteModele;
+        int nombreMaximalAffichageDeSuites = 5;
+        int nombreActuelDaffichageDeSuites = 0;
 
         public Minuterie TempsJeu
         {
@@ -27,6 +29,15 @@ namespace jeuSuites
         private void StartTimer()
         {
             tempsJeu.Partir();
+        }
+
+        public bool LeNombreMaximalDAffichageDeCarteAEteAtteint()
+        {
+            if(nombreMaximalAffichageDeSuites == nombreActuelDaffichageDeSuites)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
