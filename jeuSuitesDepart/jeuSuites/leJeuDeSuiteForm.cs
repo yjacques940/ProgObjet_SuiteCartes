@@ -64,14 +64,7 @@ namespace jeuSuites
         {
             remainingTimeLabel.Text = leJeuDeSuite.TempsJeu.Secondes.ToString() + " secondes";
         }
-
-        private void buttonNextSuite_Click(object sender, EventArgs e)
-        {
-            leJeuDeSuite.MinuterieTerminee();
-            VerifierFinExecution();
-            AfficherInformations();
-        }
-
+        
         private void AfficherLesCartes()
         {
             card1Label.Text = leJeuDeSuite.suiteModele.getCarte(0);
@@ -79,6 +72,13 @@ namespace jeuSuites
             card3Label.Text = leJeuDeSuite.suiteModele.getCarte(2);
             card4Label.Text = leJeuDeSuite.suiteModele.getCarte(3);
             card5Label.Text = leJeuDeSuite.suiteModele.getCarte(4);
+        }
+
+        private void nextSuiteButton_Click(object sender, EventArgs e)
+        {
+            leJeuDeSuite.MinuterieTerminee();
+            VerifierFinExecution();
+            AfficherInformations();
         }
     }
 }

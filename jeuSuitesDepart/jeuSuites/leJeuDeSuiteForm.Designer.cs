@@ -35,11 +35,11 @@
             this.card3Label = new System.Windows.Forms.Label();
             this.card4Label = new System.Windows.Forms.Label();
             this.card5Label = new System.Windows.Forms.Label();
-            this.buttonNextSuite = new System.Windows.Forms.Button();
+            this.nextSuiteButton = new System.Windows.Forms.Button();
             this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nombreDeSuiteGroupBox = new System.Windows.Forms.GroupBox();
             this.timeRemainingGroupBox.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.nombreDeSuiteGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // remainingTimeLabel
@@ -107,15 +107,15 @@
             this.card5Label.TabIndex = 7;
             this.card5Label.Text = "carte5";
             // 
-            // groupBox1
+            // nextSuiteButton
             // 
-            this.groupBox1.Controls.Add(this.nombreDeSuitesGenereesLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(104, 35);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nombre de suites";
+            this.nextSuiteButton.Location = new System.Drawing.Point(322, 241);
+            this.nextSuiteButton.Name = "nextSuiteButton";
+            this.nextSuiteButton.Size = new System.Drawing.Size(105, 23);
+            this.nextSuiteButton.TabIndex = 8;
+            this.nextSuiteButton.Text = "prochaine suite";
+            this.nextSuiteButton.UseVisualStyleBackColor = true;
+            this.nextSuiteButton.Click += new System.EventHandler(this.nextSuiteButton_Click);
             // 
             // nombreDeSuitesGenereesLabel
             // 
@@ -126,23 +126,23 @@
             this.nombreDeSuitesGenereesLabel.TabIndex = 1;
             this.nombreDeSuitesGenereesLabel.Text = "[nb]";
             // 
-            // buttonNextSuite
+            // nombreDeSuiteGroupBox
             // 
-            this.buttonNextSuite.Location = new System.Drawing.Point(322, 241);
-            this.buttonNextSuite.Name = "buttonNextSuite";
-            this.buttonNextSuite.Size = new System.Drawing.Size(105, 23);
-            this.buttonNextSuite.TabIndex = 8;
-            this.buttonNextSuite.Text = "prochaine suite";
-            this.buttonNextSuite.UseVisualStyleBackColor = true;
-            this.buttonNextSuite.Click += new System.EventHandler(this.buttonNextSuite_Click);
+            this.nombreDeSuiteGroupBox.Controls.Add(this.nombreDeSuitesGenereesLabel);
+            this.nombreDeSuiteGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.nombreDeSuiteGroupBox.Name = "nombreDeSuiteGroupBox";
+            this.nombreDeSuiteGroupBox.Size = new System.Drawing.Size(104, 35);
+            this.nombreDeSuiteGroupBox.TabIndex = 8;
+            this.nombreDeSuiteGroupBox.TabStop = false;
+            this.nombreDeSuiteGroupBox.Text = "Nombre de suites";
             // 
             // leJeuDeSuiteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonNextSuite);
+            this.Controls.Add(this.nombreDeSuiteGroupBox);
+            this.Controls.Add(this.nextSuiteButton);
             this.Controls.Add(this.card5Label);
             this.Controls.Add(this.card4Label);
             this.Controls.Add(this.card3Label);
@@ -153,8 +153,8 @@
             this.Text = "Suites de cartes";
             this.timeRemainingGroupBox.ResumeLayout(false);
             this.timeRemainingGroupBox.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.nombreDeSuiteGroupBox.ResumeLayout(false);
+            this.nombreDeSuiteGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,8 +169,8 @@
         private System.Windows.Forms.Label card3Label;
         private System.Windows.Forms.Label card4Label;
         private System.Windows.Forms.Label card5Label;
-        private System.Windows.Forms.Button buttonNextSuite;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button nextSuiteButton;
+        private System.Windows.Forms.GroupBox nombreDeSuiteGroupBox;
         private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
     }
 }

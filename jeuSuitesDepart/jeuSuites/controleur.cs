@@ -9,10 +9,10 @@ namespace jeuSuites
     class Controleur
     {
         Minuterie tempsJeu;
-        public SuiteCartes suiteModele;
         int nombreMaxDeCartes = 5;
-        public int nombreDeSuitesGenerees = 1;
         int nombreMaximalDeSuitesGenerees = 5;
+        public SuiteCartes suiteModele;
+        public int nombreDeSuitesGenerees = 1;
 
         public Minuterie TempsJeu
         {
@@ -52,7 +52,6 @@ namespace jeuSuites
         internal void GenererNouvelleSuite()
         {
             suiteModele.GenererNouvelleSuiteCarte(nombreMaxDeCartes);
-           
         }
 
         public void AugmenterNombreDeSuiteGeneree()

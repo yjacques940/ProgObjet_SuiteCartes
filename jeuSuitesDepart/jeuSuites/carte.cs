@@ -35,6 +35,7 @@ namespace jeuSuites
             valeurCarte = generateurCarte.Next(13) + 1;
             atoutCarte = GenererAtout();
         }
+
         char GenererAtout()
         {
             int indice = generateurCarte.Next(4);
