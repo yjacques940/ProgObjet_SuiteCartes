@@ -44,5 +44,15 @@ namespace jeuSuites
                 Close();
             }
         }
+
+        private void buttonNextSuite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AfficherLesCartes()
+        {
+            card1Label.Text = SuiteCartes[1];
+        }
     }
 }
