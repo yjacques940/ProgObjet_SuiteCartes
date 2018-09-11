@@ -52,7 +52,11 @@ namespace jeuSuites
 
         private void AfficherLesCartes()
         {
-            card1Label.Text = SuiteCartes[1];
+            card1Label.Text = leJeuDeSuite.suiteModele.getCarte(1);
+            card2Label.Text = leJeuDeSuite.suiteModele.getCarte(2);
+            card3Label.Text = leJeuDeSuite.suiteModele.getCarte(3);
+            card4Label.Text = leJeuDeSuite.suiteModele.getCarte(4);
+            card5Label.Text = leJeuDeSuite.suiteModele.getCarte(5);
         }
     }
 }

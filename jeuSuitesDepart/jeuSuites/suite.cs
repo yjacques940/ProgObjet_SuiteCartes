@@ -13,6 +13,11 @@ namespace jeuSuites
 
         Carte[] suiteCartes = new Carte[longueurSuite];
 
+        public string getCarte(int index)
+        {
+           return suiteCartes[index].ValeurCarte; 
+        }
+
         public SuiteCartes()
         {
             for (int cpt = 0; cpt < longueurSuite; cpt++)
