@@ -19,6 +19,11 @@ namespace jeuSuites
         int valeurCarte;
         char atoutCarte;
 
+        public string ValeurCarte
+        {
+            get { return valeurCarte.ToString() + " " + atoutCarte; }
+        }
+
         public Carte()
         {
             valeurCarte = 0;
@@ -35,6 +40,5 @@ namespace jeuSuites
             int indice = generateurCarte.Next(4);
             return lesAtouts[indice];
         }
-
     }
 }
