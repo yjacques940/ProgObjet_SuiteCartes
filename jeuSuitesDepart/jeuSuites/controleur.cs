@@ -11,6 +11,7 @@ namespace jeuSuites
         Minuterie tempsJeu;
         int nombreDeSuitesGenerees = 0;
         int nombreMaximalDeSuitesGenerees = 5;
+        public int nombreDeSuitesGenerees = 1;
         public SuiteCartes suiteModele;
 
         public Minuterie TempsJeu
@@ -21,7 +22,7 @@ namespace jeuSuites
         public Controleur()
         {
             tempsJeu = new Minuterie();
-            tempsJeu.FixerTemps(5);
+            tempsJeu.FixerTemps(10);
             suiteModele = new SuiteCartes();
             StartTimer();
         }
@@ -43,7 +44,7 @@ namespace jeuSuites
         internal void MinuterieTerminee()
         {
             GenererNouvelleSuite();
-            tempsJeu.FixerTemps(5);
+            tempsJeu.FixerTemps(10);
             tempsJeu.Partir();
         }
 

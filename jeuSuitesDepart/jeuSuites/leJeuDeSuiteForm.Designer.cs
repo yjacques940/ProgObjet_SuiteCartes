@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.remainingTimeLabel = new System.Windows.Forms.Label();
             this.timeRemainingGroupBox = new System.Windows.Forms.GroupBox();
             this.card1Label = new System.Windows.Forms.Label();
@@ -38,11 +37,9 @@
             this.card5Label = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.buttonNextSuite = new System.Windows.Forms.Button();
             this.timeRemainingGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // remainingTimeLabel
@@ -123,16 +120,11 @@
             // nombreDeSuitesGenereesLabel
             // 
             this.nombreDeSuitesGenereesLabel.AutoSize = true;
-            this.nombreDeSuitesGenereesLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "nombreDeSuitesGenerees", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.nombreDeSuitesGenereesLabel.Location = new System.Drawing.Point(40, 16);
             this.nombreDeSuitesGenereesLabel.Name = "nombreDeSuitesGenereesLabel";
             this.nombreDeSuitesGenereesLabel.Size = new System.Drawing.Size(25, 13);
             this.nombreDeSuitesGenereesLabel.TabIndex = 1;
             this.nombreDeSuitesGenereesLabel.Text = "[nb]";
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(jeuSuites.Controleur);
             // 
             // buttonNextSuite
             // 
@@ -163,7 +155,6 @@
             this.timeRemainingGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +169,6 @@
         private System.Windows.Forms.Label card3Label;
         private System.Windows.Forms.Label card4Label;
         private System.Windows.Forms.Label card5Label;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
         private System.Windows.Forms.Button buttonNextSuite;
