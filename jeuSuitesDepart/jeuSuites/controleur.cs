@@ -9,7 +9,7 @@ namespace jeuSuites
     class Controleur
     {
         Minuterie tempsJeu;
-        SuiteCartes suiteModele;
+        public SuiteCartes suiteModele;
         int nombreMaximalAffichageDeSuites = 5;
         int nombreActuelDaffichageDeSuites = 0;
 
