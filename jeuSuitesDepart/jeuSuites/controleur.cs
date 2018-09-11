@@ -10,8 +10,8 @@ namespace jeuSuites
     {
         Minuterie tempsJeu;
         SuiteCartes suiteModele;
-        int nombreMaximalAffichageDeSuites = 5;
-        int nombreActuelDaffichageDeSuites = 0;
+        int nombreMaximalDeSuitesGenerees = 5;
+        int nombreDeSuitesGenerees = 0;
 
         public Minuterie TempsJeu
         {
@@ -33,7 +33,7 @@ namespace jeuSuites
 
         public bool LeNombreMaximalDAffichageDeCarteAEteAtteint()
         {
-            if(nombreMaximalAffichageDeSuites == nombreActuelDaffichageDeSuites)
+            if(nombreMaximalDeSuitesGenerees == nombreDeSuitesGenerees)
             {
                 return true;
             }
