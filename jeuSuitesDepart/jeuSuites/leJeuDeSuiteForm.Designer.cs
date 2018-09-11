@@ -194,10 +194,8 @@
         private System.Windows.Forms.Label card4Label;
         private System.Windows.Forms.Label card5Label;
         private System.Windows.Forms.Button buttonNextSuite;
-        private System.Windows.Forms.Button buttonNextSuite;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
-        private System.Windows.Forms.Button buttonNextSuite;
     }
 }
 
