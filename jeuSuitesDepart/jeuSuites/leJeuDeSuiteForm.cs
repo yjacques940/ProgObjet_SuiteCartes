@@ -20,6 +20,7 @@ namespace jeuSuites
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
             AfficherTempsRestant();
+            AfficherLesCartes();
         }
 
         private void AbonnerEvenement()
@@ -47,16 +48,16 @@ namespace jeuSuites
 
         private void buttonNextSuite_Click(object sender, EventArgs e)
         {
-
+            leJeuDeSuite.GenererNouvelleSuiteDeCarte();
         }
 
         private void AfficherLesCartes()
         {
-            card1Label.Text = leJeuDeSuite.suiteModele.getCarte(1);
-            card2Label.Text = leJeuDeSuite.suiteModele.getCarte(2);
-            card3Label.Text = leJeuDeSuite.suiteModele.getCarte(3);
-            card4Label.Text = leJeuDeSuite.suiteModele.getCarte(4);
-            card5Label.Text = leJeuDeSuite.suiteModele.getCarte(5);
+            card1Label.Text = leJeuDeSuite.suiteModele.getCarte(0);
+            card2Label.Text = leJeuDeSuite.suiteModele.getCarte(1);
+            card3Label.Text = leJeuDeSuite.suiteModele.getCarte(2);
+            card4Label.Text = leJeuDeSuite.suiteModele.getCarte(3);
+            card5Label.Text = leJeuDeSuite.suiteModele.getCarte(4);
         }
     }
 }
