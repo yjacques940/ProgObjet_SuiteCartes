@@ -10,9 +10,8 @@ namespace jeuSuites
     {
         Minuterie tempsJeu;
         public SuiteCartes suiteModele;
-        int nombreMaximalDeSuitesGenerees = 5;
         public int nombreDeSuitesGenerees = 1;
-        public SuiteCartes suiteModele;
+        int nombreMaximalDeSuitesGenerees = 5;
 
         public Minuterie TempsJeu
         {
