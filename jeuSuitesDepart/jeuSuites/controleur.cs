@@ -39,5 +39,10 @@ namespace jeuSuites
             }
             return false;
         }
+
+        public void AugmenterNombreDeSuiteGeneree()
+        {
+            nombreDeSuitesGenerees++;
+        }
     }
 }
