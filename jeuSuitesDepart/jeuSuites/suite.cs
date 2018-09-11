@@ -21,5 +21,12 @@ namespace jeuSuites
             }
         }
 
+        public void GenererNouvelleSuiteCarte(int nombreCartes)
+        {
+            for (int cpt = 0; cpt < nombreCartes; cpt++)
+            {
+                suiteCartes[cpt].GenererCarte();
+            }
+        }
     }
 }
