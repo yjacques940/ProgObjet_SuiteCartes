@@ -19,14 +19,20 @@ namespace jeuSuites
             InitializeComponent();
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
+            AfficherTempsRestant();
         }
 
         private void AbonnerEvenement()
         {
-
+            leJeuDeSuite.TempsJeu.SecondeTic += minuterie_SecondeTic;
         }
 
-        private void LoadData()
+        private void minuterie_SecondeTic(object sender, EventArgs e)
+        {
+            AfficherTempsRestant();
+        }
+
+        private void AfficherTempsRestant()
         {
             remainingTimeLabel.Text = leJeuDeSuite.TempsJeu.Secondes.ToString() + " secondes";
         }

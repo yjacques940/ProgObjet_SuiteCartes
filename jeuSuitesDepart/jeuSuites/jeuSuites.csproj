@@ -54,9 +54,7 @@
     <Compile Include="leJeuDeSuiteForm.Designer.cs">
       <DependentUpon>leJeuDeSuiteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="..\..\ProgObjet_SuiteCartes\minuterie.cs">
-      <Link>minuterie.cs</Link>
-    </Compile>
+    <Compile Include="minuterie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="suite.cs" />
