@@ -25,9 +25,9 @@ namespace jeuSuites
             }
         }
 
-        public void GenererNouvelleSuiteCarte(int nombreCartes)
+        public void GenererNouvelleSuiteCarte()
         {
-            for (int cpt = 0; cpt < nombreCartes; cpt++)
+            for (int cpt = 0; cpt < longueurSuite; cpt++)
             {
                 suiteCartes[cpt].GenererCarte();
             }
