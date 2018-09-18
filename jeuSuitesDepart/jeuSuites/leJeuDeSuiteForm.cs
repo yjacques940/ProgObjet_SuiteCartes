@@ -19,6 +19,7 @@ namespace jeuSuites
             InitializeComponent();
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
+            leJeuDeSuite.GenererNouvelleSuite();
             AfficherInformations();
         }
 

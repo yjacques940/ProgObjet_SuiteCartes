@@ -35,7 +35,6 @@
             this.card3Label = new System.Windows.Forms.Label();
             this.card4Label = new System.Windows.Forms.Label();
             this.card5Label = new System.Windows.Forms.Label();
-            this.nextSuiteButton = new System.Windows.Forms.Button();
             this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
             this.nombreDeSuiteGroupBox = new System.Windows.Forms.GroupBox();
             this.totalPointsGroupBox = new System.Windows.Forms.GroupBox();
@@ -115,16 +114,6 @@
             this.card5Label.Size = new System.Drawing.Size(37, 13);
             this.card5Label.TabIndex = 7;
             this.card5Label.Text = "carte5";
-            // 
-            // nextSuiteButton
-            // 
-            this.nextSuiteButton.Location = new System.Drawing.Point(322, 241);
-            this.nextSuiteButton.Name = "nextSuiteButton";
-            this.nextSuiteButton.Size = new System.Drawing.Size(105, 23);
-            this.nextSuiteButton.TabIndex = 8;
-            this.nextSuiteButton.Text = "prochaine suite";
-            this.nextSuiteButton.UseVisualStyleBackColor = true;
-            this.nextSuiteButton.Click += new System.EventHandler(this.nextSuiteButton_Click);
             // 
             // nombreDeSuitesGenereesLabel
             // 
@@ -214,7 +203,6 @@
             this.Controls.Add(this.lastHandGroupBox);
             this.Controls.Add(this.totalPointsGroupBox);
             this.Controls.Add(this.nombreDeSuiteGroupBox);
-            this.Controls.Add(this.nextSuiteButton);
             this.Controls.Add(this.card5Label);
             this.Controls.Add(this.card4Label);
             this.Controls.Add(this.card3Label);
@@ -247,7 +235,6 @@
         private System.Windows.Forms.Label card3Label;
         private System.Windows.Forms.Label card4Label;
         private System.Windows.Forms.Label card5Label;
-        private System.Windows.Forms.Button nextSuiteButton;
         private System.Windows.Forms.GroupBox nombreDeSuiteGroupBox;
         private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
         private System.Windows.Forms.GroupBox totalPointsGroupBox;
