@@ -38,8 +38,14 @@
             this.nextSuiteButton = new System.Windows.Forms.Button();
             this.nombreDeSuitesGenereesLabel = new System.Windows.Forms.Label();
             this.nombreDeSuiteGroupBox = new System.Windows.Forms.GroupBox();
+            this.totalPointsGroupBox = new System.Windows.Forms.GroupBox();
+            this.totalPointsLabel = new System.Windows.Forms.Label();
+            this.lastHandGroupBox = new System.Windows.Forms.GroupBox();
+            this.lastHandPointsLabel = new System.Windows.Forms.Label();
             this.timeRemainingGroupBox.SuspendLayout();
             this.nombreDeSuiteGroupBox.SuspendLayout();
+            this.totalPointsGroupBox.SuspendLayout();
+            this.lastHandGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // remainingTimeLabel
@@ -55,7 +61,7 @@
             // timeRemainingGroupBox
             // 
             this.timeRemainingGroupBox.Controls.Add(this.remainingTimeLabel);
-            this.timeRemainingGroupBox.Location = new System.Drawing.Point(141, 12);
+            this.timeRemainingGroupBox.Location = new System.Drawing.Point(122, 12);
             this.timeRemainingGroupBox.Name = "timeRemainingGroupBox";
             this.timeRemainingGroupBox.Size = new System.Drawing.Size(80, 35);
             this.timeRemainingGroupBox.TabIndex = 2;
@@ -136,11 +142,53 @@
             this.nombreDeSuiteGroupBox.TabStop = false;
             this.nombreDeSuiteGroupBox.Text = "Nombre de suites";
             // 
+            // totalPointsGroupBox
+            // 
+            this.totalPointsGroupBox.Controls.Add(this.totalPointsLabel);
+            this.totalPointsGroupBox.Location = new System.Drawing.Point(208, 12);
+            this.totalPointsGroupBox.Name = "totalPointsGroupBox";
+            this.totalPointsGroupBox.Size = new System.Drawing.Size(80, 35);
+            this.totalPointsGroupBox.TabIndex = 3;
+            this.totalPointsGroupBox.TabStop = false;
+            this.totalPointsGroupBox.Text = "Points Totaux";
+            // 
+            // totalPointsLabel
+            // 
+            this.totalPointsLabel.AutoSize = true;
+            this.totalPointsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalPointsLabel.Location = new System.Drawing.Point(3, 16);
+            this.totalPointsLabel.Name = "totalPointsLabel";
+            this.totalPointsLabel.Size = new System.Drawing.Size(48, 13);
+            this.totalPointsLabel.TabIndex = 1;
+            this.totalPointsLabel.Text = "[totalPts]";
+            // 
+            // lastHandGroupBox
+            // 
+            this.lastHandGroupBox.Controls.Add(this.lastHandPointsLabel);
+            this.lastHandGroupBox.Location = new System.Drawing.Point(294, 12);
+            this.lastHandGroupBox.Name = "lastHandGroupBox";
+            this.lastHandGroupBox.Size = new System.Drawing.Size(130, 35);
+            this.lastHandGroupBox.TabIndex = 4;
+            this.lastHandGroupBox.TabStop = false;
+            this.lastHandGroupBox.Text = "Points Derniere Suite";
+            // 
+            // lastHandPointsLabel
+            // 
+            this.lastHandPointsLabel.AutoSize = true;
+            this.lastHandPointsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lastHandPointsLabel.Location = new System.Drawing.Point(3, 16);
+            this.lastHandPointsLabel.Name = "lastHandPointsLabel";
+            this.lastHandPointsLabel.Size = new System.Drawing.Size(44, 13);
+            this.lastHandPointsLabel.TabIndex = 1;
+            this.lastHandPointsLabel.Text = "[lastPts]";
+            // 
             // leJeuDeSuiteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
+            this.Controls.Add(this.lastHandGroupBox);
+            this.Controls.Add(this.totalPointsGroupBox);
             this.Controls.Add(this.nombreDeSuiteGroupBox);
             this.Controls.Add(this.nextSuiteButton);
             this.Controls.Add(this.card5Label);
@@ -155,6 +203,10 @@
             this.timeRemainingGroupBox.PerformLayout();
             this.nombreDeSuiteGroupBox.ResumeLayout(false);
             this.nombreDeSuiteGroupBox.PerformLayout();
+            this.totalPointsGroupBox.ResumeLayout(false);
+            this.totalPointsGroupBox.PerformLayout();
+            this.lastHandGroupBox.ResumeLayout(false);
+            this.lastHandGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +224,10 @@
         private System.Windows.Forms.Button nextSuiteButton;
         private System.Windows.Forms.GroupBox nombreDeSuiteGroupBox;
         private System.Windows.Forms.Label nombreDeSuitesGenereesLabel;
+        private System.Windows.Forms.GroupBox totalPointsGroupBox;
+        private System.Windows.Forms.Label totalPointsLabel;
+        private System.Windows.Forms.GroupBox lastHandGroupBox;
+        private System.Windows.Forms.Label lastHandPointsLabel;
     }
 }
 

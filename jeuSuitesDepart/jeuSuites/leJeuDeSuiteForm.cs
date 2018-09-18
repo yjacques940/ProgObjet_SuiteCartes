@@ -43,7 +43,7 @@ namespace jeuSuites
 
         private void minuterie_FinMinuterie(object sender, EventArgs e)
         {
-            //Ajouter un echec
+            leJeuDeSuite.AjouterEchecAuJoueur();
             PasserALaProchaineSuite();
         }
 
@@ -90,6 +90,16 @@ namespace jeuSuites
             leJeuDeSuite.MinuterieTerminee();
             VerifierFinExecution();
             AfficherInformations();
+        }
+
+        public void AfficherLesPointsDuJoueur(int points)
+        {
+
+        }
+
+        public void AfficherEchecDuJoueur(int nombreEchecs)
+        {
+
         }
     }
 }
