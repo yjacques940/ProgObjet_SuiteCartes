@@ -11,6 +11,8 @@ namespace jeuSuites
         Minuterie tempsJeu;
         int nombreMaxDeCartes = 5;
         int nombreMaximalDeSuitesGenerees = 5;
+        int nombreEchecs;
+        int pointsTotaux;
         public SuiteCartes suiteModele;
         public int nombreDeSuitesGenerees = 1;
 
@@ -45,18 +47,29 @@ namespace jeuSuites
         {          
             AugmenterNombreDeSuiteGeneree();
             GenererNouvelleSuite();
-            tempsJeu.FixerTemps(10);
+            tempsJeu.FixerTemps(20);
             tempsJeu.Partir();
         }
 
         internal void GenererNouvelleSuite()
         {
-            suiteModele.GenererNouvelleSuiteCarte(nombreMaxDeCartes);
+            suiteModele.GenererNouvelleSuiteCarte();
         }
 
         public void AugmenterNombreDeSuiteGeneree()
         {
             nombreDeSuitesGenerees++;
         }
+
+        public void AjouterPointsAuJoueur(int pointsAjouter)
+        {
+            pointsTotaux += pointsAjouter;
+        }
+
+        public void AjouterEchecAuJoueur()
+        {
+            nombreEchecs++;
+        }
+
     }
 }

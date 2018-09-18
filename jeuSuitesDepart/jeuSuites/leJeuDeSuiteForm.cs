@@ -38,13 +38,13 @@ namespace jeuSuites
         {
             leJeuDeSuite.TempsJeu.SecondeTic += minuterie_SecondeTic;
             leJeuDeSuite.TempsJeu.FinMinuterie += minuterie_FinMinuterie;
+            leJeuDeSuite.suiteModele.SuiteReussie += suite_SuiteReussie;
         }
 
         private void minuterie_FinMinuterie(object sender, EventArgs e)
         {
-            leJeuDeSuite.MinuterieTerminee();
-            VerifierFinExecution();
-            AfficherInformations();
+            //Ajouter un echec
+            PasserALaProchaineSuite();
         }
 
         private void VerifierFinExecution()
@@ -75,6 +75,17 @@ namespace jeuSuites
         }
 
         private void nextSuiteButton_Click(object sender, EventArgs e)
+        {
+            PasserALaProchaineSuite();
+        }
+
+        private void suite_SuiteReussie(object sender, PointsSuiteReussiEventArgs e)
+        {
+            //Ajouter les points
+            PasserALaProchaineSuite();
+        }
+
+        public void PasserALaProchaineSuite()
         {
             leJeuDeSuite.MinuterieTerminee();
             VerifierFinExecution();
