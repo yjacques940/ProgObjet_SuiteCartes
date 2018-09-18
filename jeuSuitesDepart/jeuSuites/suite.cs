@@ -37,20 +37,21 @@ namespace jeuSuites
             }
         }
 
-        private void VerifierSiSuiteEnOrdre()
+        public bool VerifierSiSuiteEnOrdre()
         {
-            bool enOrdre = false;
-            for (int cpt = 0; cpt<longueurSuite;cpt++)
+            bool enOrdre = true;
+            for (int cpt = 0; cpt<longueurSuite-1;cpt++)
             {
-                if (suiteCartes[cpt] > suiteCartes[cpt])
+                if (suiteCartes[cpt] > suiteCartes[cpt+1])
                 {
                     enOrdre = false;
                 }
             }
             if (enOrdre)
             {
-                SuiteReussie(this, new PointsSuiteReussiEventArgs(suiteCartes));
+                SuiteReussie(this, new PointsSuiteReussiEventArgs(suiteCartes));                
             }
+            return enOrdre;
         }
     }
 

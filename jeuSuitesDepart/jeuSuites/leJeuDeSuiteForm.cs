@@ -20,12 +20,13 @@ namespace jeuSuites
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
             leJeuDeSuite.GenererNouvelleSuite();
-            CacherPartieTerminee();
+            CacherControles();
             AfficherInformations();
         }
 
         private void AfficherInformations()
         {
+            CacherControles();
             AfficherTempsRestant();
             AfficherNombreDeSuiteGenerees();
             AfficherLesCartes();
@@ -109,15 +110,31 @@ namespace jeuSuites
             numberOfFailuresLabel.Text = leJeuDeSuite.NombreEchecs;
         }
 
-        public void CacherPartieTerminee()
+        public void CacherControles()
         {
             gameOverLabel.Visible = false;
+            handInOrderLabel.Visible = false;
         }
 
         public void PartieTerminee()
         {
             gameOverLabel.Visible = true;
             gameOverLabel.Text = "Vous avez perdu";
+        }
+
+        private void checkOrderButton_Click(object sender, EventArgs e)
+        {
+            if (!leJeuDeSuite.verifierSiSuiteEnOrdre())
+            {
+                AnnoncerSuitePasEnOrdre();
+            }
+        }
+
+        public void AnnoncerSuitePasEnOrdre()
+        {
+            handInOrderLabel.Visible = true;
+            handInOrderLabel.Text = "Cette suite n'est pas en ordre";
+            handInOrderLabel.ForeColor = Color.Red;
         }
     }
 }

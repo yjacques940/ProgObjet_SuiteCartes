@@ -44,6 +44,8 @@
             this.numberOfFailuresGroupBox = new System.Windows.Forms.GroupBox();
             this.numberOfFailuresLabel = new System.Windows.Forms.Label();
             this.gameOverLabel = new System.Windows.Forms.Label();
+            this.checkOrderButton = new System.Windows.Forms.Button();
+            this.handInOrderLabel = new System.Windows.Forms.Label();
             this.timeRemainingGroupBox.SuspendLayout();
             this.nombreDeSuiteGroupBox.SuspendLayout();
             this.totalPointsGroupBox.SuspendLayout();
@@ -204,17 +206,39 @@
             // 
             this.gameOverLabel.AutoSize = true;
             this.gameOverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameOverLabel.Location = new System.Drawing.Point(118, 157);
+            this.gameOverLabel.Location = new System.Drawing.Point(118, 155);
             this.gameOverLabel.Name = "gameOverLabel";
             this.gameOverLabel.Size = new System.Drawing.Size(170, 24);
             this.gameOverLabel.TabIndex = 9;
             this.gameOverLabel.Text = "[gameOverLabel]";
+            // 
+            // checkOrderButton
+            // 
+            this.checkOrderButton.Location = new System.Drawing.Point(150, 231);
+            this.checkOrderButton.Name = "checkOrderButton";
+            this.checkOrderButton.Size = new System.Drawing.Size(82, 32);
+            this.checkOrderButton.TabIndex = 10;
+            this.checkOrderButton.Text = "Verifier Suite";
+            this.checkOrderButton.UseVisualStyleBackColor = true;
+            this.checkOrderButton.Click += new System.EventHandler(this.checkOrderButton_Click);
+            // 
+            // handInOrderLabel
+            // 
+            this.handInOrderLabel.AutoSize = true;
+            this.handInOrderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.handInOrderLabel.Location = new System.Drawing.Point(94, 195);
+            this.handInOrderLabel.Name = "handInOrderLabel";
+            this.handInOrderLabel.Size = new System.Drawing.Size(168, 20);
+            this.handInOrderLabel.TabIndex = 11;
+            this.handInOrderLabel.Text = "[handInOrderLabell]";
             // 
             // leJeuDeSuiteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
+            this.Controls.Add(this.handInOrderLabel);
+            this.Controls.Add(this.checkOrderButton);
             this.Controls.Add(this.gameOverLabel);
             this.Controls.Add(this.numberOfFailuresGroupBox);
             this.Controls.Add(this.lastHandGroupBox);
@@ -261,6 +285,8 @@
         private System.Windows.Forms.GroupBox numberOfFailuresGroupBox;
         private System.Windows.Forms.Label numberOfFailuresLabel;
         private System.Windows.Forms.Label gameOverLabel;
+        private System.Windows.Forms.Button checkOrderButton;
+        private System.Windows.Forms.Label handInOrderLabel;
     }
 }
 

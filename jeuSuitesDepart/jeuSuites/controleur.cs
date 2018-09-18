@@ -114,5 +114,10 @@ namespace jeuSuites
             }
             return partieTerminee;
         }
+
+        public bool verifierSiSuiteEnOrdre()
+        {
+            return suiteModele.VerifierSiSuiteEnOrdre();
+        }
     }
 }
