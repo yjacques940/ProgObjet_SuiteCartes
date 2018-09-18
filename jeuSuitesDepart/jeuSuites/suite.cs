@@ -49,7 +49,7 @@ namespace jeuSuites
             }
             if (enOrdre)
             {
-                SuiteReussie(this, new PointsSuiteReussiEventArgs(suiteCartes[]));
+                SuiteReussie(this, new PointsSuiteReussiEventArgs(suiteCartes));
             }
         }
     }
@@ -64,11 +64,11 @@ namespace jeuSuites
             get { return points; }
         }
         //constructeur qui sera utilisé lorsqu'on déclenchera l'événement
-        public PointsSuiteReussiEventArgs(int[] suite)
+        public PointsSuiteReussiEventArgs(Carte[] suite)
         {
             for(int cpt = 0; cpt<= SuiteCartes.longueurSuite; cpt++)
             {
-                points += suite[cpt];
+                points += suite[cpt].ValeurChiffreCarte;
             }
         }
     }

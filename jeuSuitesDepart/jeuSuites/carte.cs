@@ -24,6 +24,11 @@ namespace jeuSuites
             get { return valeurCarte.ToString() + " " + atoutCarte; }
         }
 
+        public int ValeurChiffreCarte
+        {
+            get { return valeurCarte; }
+        }
+
         public Carte()
         {
             valeurCarte = 0;
