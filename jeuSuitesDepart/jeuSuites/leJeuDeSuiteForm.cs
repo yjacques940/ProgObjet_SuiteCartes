@@ -20,6 +20,7 @@ namespace jeuSuites
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
             leJeuDeSuite.GenererNouvelleSuite();
+            CacherPartieTerminee();
             AfficherInformations();
         }
 
@@ -53,10 +54,10 @@ namespace jeuSuites
 
         private void VerifierFinExecution()
         {
-            if (leJeuDeSuite.LeNombreMaximalDAffichageDeCarteAEteAtteint())
+            if (leJeuDeSuite.VerifierFinExecution())
             {
-                Close();
-            }
+                PartieTerminee();
+            };
         }
 
         private void minuterie_SecondeTic(object sender, EventArgs e)
@@ -106,6 +107,17 @@ namespace jeuSuites
         public void AfficherEchecDuJoueur()
         {
             numberOfFailuresLabel.Text = leJeuDeSuite.NombreEchecs;
+        }
+
+        public void CacherPartieTerminee()
+        {
+            gameOverLabel.Visible = false;
+        }
+
+        public void PartieTerminee()
+        {
+            gameOverLabel.Visible = true;
+            gameOverLabel.Text = "Vous avez perdu";
         }
     }
 }

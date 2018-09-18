@@ -10,11 +10,12 @@ namespace jeuSuites
     {
         Minuterie tempsJeu;
         int tempsDuTimer = 20;
-        int nombreMaxDeCartes = 5;
         int nombreMaximalDeSuitesGenerees = 5;
         int nombreEchecs;
         int pointsTotaux;
         int pointsDerniereSuite;
+        int nombreEchecsMax = 2;
+
         public SuiteCartes suiteModele;
         public int nombreDeSuitesGenerees = 1;
 
@@ -49,6 +50,11 @@ namespace jeuSuites
         private void StartTimer()
         {
             tempsJeu.Partir();
+        }
+
+        private void StopTimer()
+        {
+            tempsJeu.Arreter();
         }
 
         public bool LeNombreMaximalDAffichageDeCarteAEteAtteint()
@@ -93,5 +99,20 @@ namespace jeuSuites
             nombreEchecs++;
         }
 
+        public bool VerifierSiJoueurAtteintLimiteEchecs()
+        {
+            return (nombreEchecs == nombreEchecsMax);
+        }
+
+        public bool VerifierFinExecution()
+        {
+            bool partieTerminee = false;
+            if (LeNombreMaximalDAffichageDeCarteAEteAtteint() || VerifierSiJoueurAtteintLimiteEchecs())
+            {
+                StopTimer();
+                partieTerminee= true;
+            }
+            return partieTerminee;
+        }
     }
 }

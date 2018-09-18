@@ -43,6 +43,7 @@
             this.lastHandPointsLabel = new System.Windows.Forms.Label();
             this.numberOfFailuresGroupBox = new System.Windows.Forms.GroupBox();
             this.numberOfFailuresLabel = new System.Windows.Forms.Label();
+            this.gameOverLabel = new System.Windows.Forms.Label();
             this.timeRemainingGroupBox.SuspendLayout();
             this.nombreDeSuiteGroupBox.SuspendLayout();
             this.totalPointsGroupBox.SuspendLayout();
@@ -73,45 +74,50 @@
             // card1Label
             // 
             this.card1Label.AutoSize = true;
-            this.card1Label.Location = new System.Drawing.Point(52, 115);
+            this.card1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.card1Label.Location = new System.Drawing.Point(62, 114);
             this.card1Label.Name = "card1Label";
-            this.card1Label.Size = new System.Drawing.Size(37, 13);
+            this.card1Label.Size = new System.Drawing.Size(54, 20);
             this.card1Label.TabIndex = 3;
             this.card1Label.Text = "carte1";
             // 
             // card2Label
             // 
             this.card2Label.AutoSize = true;
-            this.card2Label.Location = new System.Drawing.Point(95, 115);
+            this.card2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.card2Label.Location = new System.Drawing.Point(118, 114);
             this.card2Label.Name = "card2Label";
-            this.card2Label.Size = new System.Drawing.Size(37, 13);
+            this.card2Label.Size = new System.Drawing.Size(54, 20);
             this.card2Label.TabIndex = 4;
             this.card2Label.Text = "carte2";
             // 
             // card3Label
             // 
             this.card3Label.AutoSize = true;
-            this.card3Label.Location = new System.Drawing.Point(138, 115);
+            this.card3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.card3Label.Location = new System.Drawing.Point(178, 114);
             this.card3Label.Name = "card3Label";
-            this.card3Label.Size = new System.Drawing.Size(37, 13);
+            this.card3Label.Size = new System.Drawing.Size(54, 20);
             this.card3Label.TabIndex = 5;
             this.card3Label.Text = "carte3";
             // 
             // card4Label
             // 
             this.card4Label.AutoSize = true;
-            this.card4Label.Location = new System.Drawing.Point(181, 115);
+            this.card4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.card4Label.Location = new System.Drawing.Point(234, 114);
             this.card4Label.Name = "card4Label";
-            this.card4Label.Size = new System.Drawing.Size(37, 13);
+            this.card4Label.Size = new System.Drawing.Size(54, 20);
             this.card4Label.TabIndex = 6;
             this.card4Label.Text = "carte4";
             // 
             // card5Label
             // 
             this.card5Label.AutoSize = true;
-            this.card5Label.Location = new System.Drawing.Point(224, 115);
+            this.card5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.card5Label.Location = new System.Drawing.Point(294, 114);
             this.card5Label.Name = "card5Label";
-            this.card5Label.Size = new System.Drawing.Size(37, 13);
+            this.card5Label.Size = new System.Drawing.Size(54, 20);
             this.card5Label.TabIndex = 7;
             this.card5Label.Text = "carte5";
             // 
@@ -194,11 +200,22 @@
             this.numberOfFailuresLabel.TabIndex = 1;
             this.numberOfFailuresLabel.Text = "[totalPts]";
             // 
+            // gameOverLabel
+            // 
+            this.gameOverLabel.AutoSize = true;
+            this.gameOverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverLabel.Location = new System.Drawing.Point(118, 157);
+            this.gameOverLabel.Name = "gameOverLabel";
+            this.gameOverLabel.Size = new System.Drawing.Size(170, 24);
+            this.gameOverLabel.TabIndex = 9;
+            this.gameOverLabel.Text = "[gameOverLabel]";
+            // 
             // leJeuDeSuiteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
+            this.Controls.Add(this.gameOverLabel);
             this.Controls.Add(this.numberOfFailuresGroupBox);
             this.Controls.Add(this.lastHandGroupBox);
             this.Controls.Add(this.totalPointsGroupBox);
@@ -243,6 +260,7 @@
         private System.Windows.Forms.Label lastHandPointsLabel;
         private System.Windows.Forms.GroupBox numberOfFailuresGroupBox;
         private System.Windows.Forms.Label numberOfFailuresLabel;
+        private System.Windows.Forms.Label gameOverLabel;
     }
 }
 
