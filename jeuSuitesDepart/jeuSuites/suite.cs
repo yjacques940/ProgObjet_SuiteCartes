@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,7 +67,7 @@ namespace jeuSuites
         //constructeur qui sera utilisé lorsqu'on déclenchera l'événement
         public PointsSuiteReussiEventArgs(Carte[] suite)
         {
-            for(int cpt = 0; cpt<= SuiteCartes.longueurSuite; cpt++)
+            for(int cpt = 0; cpt< SuiteCartes.longueurSuite; cpt++)
             {
                 points += suite[cpt].ValeurChiffreCarte;
             }

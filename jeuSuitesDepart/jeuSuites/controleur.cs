@@ -59,11 +59,7 @@ namespace jeuSuites
 
         public bool LeNombreMaximalDAffichageDeCarteAEteAtteint()
         {
-            if(nombreMaximalDeSuitesGenerees < nombreDeSuitesGenerees)
-            {
-                return true;
-            }
-            return false;
+            return (nombreMaximalDeSuitesGenerees < nombreDeSuitesGenerees);
         }
 
         internal void MinuterieTerminee()
@@ -117,7 +113,7 @@ namespace jeuSuites
 
         public bool verifierSiSuiteEnOrdre()
         {
-            return suiteModele.VerifierSiSuiteEnOrdre();
+             return suiteModele.VerifierSiSuiteEnOrdre();
         }
     }
 }

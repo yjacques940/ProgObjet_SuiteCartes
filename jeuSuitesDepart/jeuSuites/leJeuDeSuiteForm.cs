@@ -118,6 +118,7 @@ namespace jeuSuites
 
         public void PartieTerminee()
         {
+            checkOrderButton.Enabled = false;
             gameOverLabel.Visible = true;
             gameOverLabel.Text = "Vous avez perdu";
         }
