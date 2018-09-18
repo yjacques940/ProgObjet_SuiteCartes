@@ -81,7 +81,7 @@ namespace jeuSuites
 
         private void suite_SuiteReussie(object sender, PointsSuiteReussiEventArgs e)
         {
-            //Ajouter les points
+            leJeuDeSuite.AjouterPointsAuJoueur(e.Points);
             PasserALaProchaineSuite();
         }
 

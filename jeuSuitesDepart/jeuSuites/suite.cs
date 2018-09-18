@@ -13,7 +13,8 @@ namespace jeuSuites
 
         Carte[] suiteCartes = new Carte[longueurSuite];
 
-        public event EventHandler SuiteReussie;
+        public delegate void PointsSuiteReussiEventHandler(Object sender, PointsSuiteReussiEventArgs e);
+        public event PointsSuiteReussiEventHandler SuiteReussie;
 
         public string getCarte(int index)
         {
