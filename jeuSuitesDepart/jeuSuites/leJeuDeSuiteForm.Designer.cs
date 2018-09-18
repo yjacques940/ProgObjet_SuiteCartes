@@ -42,10 +42,13 @@
             this.totalPointsLabel = new System.Windows.Forms.Label();
             this.lastHandGroupBox = new System.Windows.Forms.GroupBox();
             this.lastHandPointsLabel = new System.Windows.Forms.Label();
+            this.numberOfFailuresGroupBox = new System.Windows.Forms.GroupBox();
+            this.numberOfFailuresLabel = new System.Windows.Forms.Label();
             this.timeRemainingGroupBox.SuspendLayout();
             this.nombreDeSuiteGroupBox.SuspendLayout();
             this.totalPointsGroupBox.SuspendLayout();
             this.lastHandGroupBox.SuspendLayout();
+            this.numberOfFailuresGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // remainingTimeLabel
@@ -145,9 +148,9 @@
             // totalPointsGroupBox
             // 
             this.totalPointsGroupBox.Controls.Add(this.totalPointsLabel);
-            this.totalPointsGroupBox.Location = new System.Drawing.Point(208, 12);
+            this.totalPointsGroupBox.Location = new System.Drawing.Point(211, 12);
             this.totalPointsGroupBox.Name = "totalPointsGroupBox";
-            this.totalPointsGroupBox.Size = new System.Drawing.Size(80, 35);
+            this.totalPointsGroupBox.Size = new System.Drawing.Size(88, 35);
             this.totalPointsGroupBox.TabIndex = 3;
             this.totalPointsGroupBox.TabStop = false;
             this.totalPointsGroupBox.Text = "Points Totaux";
@@ -165,7 +168,7 @@
             // lastHandGroupBox
             // 
             this.lastHandGroupBox.Controls.Add(this.lastHandPointsLabel);
-            this.lastHandGroupBox.Location = new System.Drawing.Point(294, 12);
+            this.lastHandGroupBox.Location = new System.Drawing.Point(305, 12);
             this.lastHandGroupBox.Name = "lastHandGroupBox";
             this.lastHandGroupBox.Size = new System.Drawing.Size(130, 35);
             this.lastHandGroupBox.TabIndex = 4;
@@ -182,11 +185,32 @@
             this.lastHandPointsLabel.TabIndex = 1;
             this.lastHandPointsLabel.Text = "[lastPts]";
             // 
+            // numberOfFailuresGroupBox
+            // 
+            this.numberOfFailuresGroupBox.Controls.Add(this.numberOfFailuresLabel);
+            this.numberOfFailuresGroupBox.Location = new System.Drawing.Point(12, 53);
+            this.numberOfFailuresGroupBox.Name = "numberOfFailuresGroupBox";
+            this.numberOfFailuresGroupBox.Size = new System.Drawing.Size(104, 35);
+            this.numberOfFailuresGroupBox.TabIndex = 4;
+            this.numberOfFailuresGroupBox.TabStop = false;
+            this.numberOfFailuresGroupBox.Text = "Nombre d\'echecs";
+            // 
+            // numberOfFailuresLabel
+            // 
+            this.numberOfFailuresLabel.AutoSize = true;
+            this.numberOfFailuresLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numberOfFailuresLabel.Location = new System.Drawing.Point(3, 16);
+            this.numberOfFailuresLabel.Name = "numberOfFailuresLabel";
+            this.numberOfFailuresLabel.Size = new System.Drawing.Size(48, 13);
+            this.numberOfFailuresLabel.TabIndex = 1;
+            this.numberOfFailuresLabel.Text = "[totalPts]";
+            // 
             // leJeuDeSuiteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 285);
+            this.Controls.Add(this.numberOfFailuresGroupBox);
             this.Controls.Add(this.lastHandGroupBox);
             this.Controls.Add(this.totalPointsGroupBox);
             this.Controls.Add(this.nombreDeSuiteGroupBox);
@@ -207,6 +231,8 @@
             this.totalPointsGroupBox.PerformLayout();
             this.lastHandGroupBox.ResumeLayout(false);
             this.lastHandGroupBox.PerformLayout();
+            this.numberOfFailuresGroupBox.ResumeLayout(false);
+            this.numberOfFailuresGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +254,8 @@
         private System.Windows.Forms.Label totalPointsLabel;
         private System.Windows.Forms.GroupBox lastHandGroupBox;
         private System.Windows.Forms.Label lastHandPointsLabel;
+        private System.Windows.Forms.GroupBox numberOfFailuresGroupBox;
+        private System.Windows.Forms.Label numberOfFailuresLabel;
     }
 }
 

@@ -27,6 +27,8 @@ namespace jeuSuites
             AfficherTempsRestant();
             AfficherNombreDeSuiteGenerees();
             AfficherLesCartes();
+            AfficherEchecDuJoueur();
+            AfficherLesPointsDuJoueur();
         }
 
         private void AfficherNombreDeSuiteGenerees()
@@ -44,6 +46,7 @@ namespace jeuSuites
         private void minuterie_FinMinuterie(object sender, EventArgs e)
         {
             leJeuDeSuite.AjouterEchecAuJoueur();
+            leJeuDeSuite.ConserverPointsDerniereSuite(0);      
             PasserALaProchaineSuite();
         }
 
@@ -82,6 +85,7 @@ namespace jeuSuites
         private void suite_SuiteReussie(object sender, PointsSuiteReussiEventArgs e)
         {
             leJeuDeSuite.AjouterPointsAuJoueur(e.Points);
+            leJeuDeSuite.ConserverPointsDerniereSuite(e.Points);
             PasserALaProchaineSuite();
         }
 
@@ -92,14 +96,15 @@ namespace jeuSuites
             AfficherInformations();
         }
 
-        public void AfficherLesPointsDuJoueur(int points)
+        public void AfficherLesPointsDuJoueur()
         {
-
+            totalPointsLabel.Text = leJeuDeSuite.PointsTotaux;
+            lastHandPointsLabel.Text = leJeuDeSuite.PointsDerniereSuite;
         }
 
-        public void AfficherEchecDuJoueur(int nombreEchecs)
+        public void AfficherEchecDuJoueur()
         {
-
+            numberOfFailuresLabel.Text = leJeuDeSuite.NombreEchecs;
         }
     }
 }

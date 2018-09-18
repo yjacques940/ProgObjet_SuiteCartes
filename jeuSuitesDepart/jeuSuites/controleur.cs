@@ -9,10 +9,12 @@ namespace jeuSuites
     class Controleur
     {
         Minuterie tempsJeu;
+        int tempsDuTimer = 20;
         int nombreMaxDeCartes = 5;
         int nombreMaximalDeSuitesGenerees = 5;
         int nombreEchecs;
         int pointsTotaux;
+        int pointsDerniereSuite;
         public SuiteCartes suiteModele;
         public int nombreDeSuitesGenerees = 1;
 
@@ -21,10 +23,25 @@ namespace jeuSuites
             get { return tempsJeu; }
         }
 
+        public String NombreEchecs
+        {
+            get { return nombreEchecs.ToString(); }
+        }
+
+        public String PointsTotaux
+        {
+            get { return pointsTotaux.ToString(); }
+        }
+
+        public String PointsDerniereSuite
+        {
+            get { return pointsDerniereSuite.ToString(); }
+        }
+
         public Controleur()
         {
             tempsJeu = new Minuterie();
-            tempsJeu.FixerTemps(10);
+            tempsJeu.FixerTemps(tempsDuTimer);
             suiteModele = new SuiteCartes();
             StartTimer();
         }
@@ -47,7 +64,7 @@ namespace jeuSuites
         {          
             AugmenterNombreDeSuiteGeneree();
             GenererNouvelleSuite();
-            tempsJeu.FixerTemps(20);
+            tempsJeu.FixerTemps(tempsDuTimer);
             tempsJeu.Partir();
         }
 
@@ -59,6 +76,11 @@ namespace jeuSuites
         public void AugmenterNombreDeSuiteGeneree()
         {
             nombreDeSuitesGenerees++;
+        }
+
+        public void ConserverPointsDerniereSuite(int points)
+        {
+            pointsDerniereSuite = points;
         }
 
         public void AjouterPointsAuJoueur(int pointsAjouter)
