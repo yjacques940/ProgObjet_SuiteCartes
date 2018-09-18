@@ -41,5 +41,16 @@ namespace jeuSuites
             int indice = generateurCarte.Next(4);
             return lesAtouts[indice];
         }
+         
+        public static bool operator >(Carte Carte1, Carte Carte2)
+        {
+            return (Carte1.valeurCarte > Carte2.valeurCarte);
+        }
+
+        public static bool operator <(Carte Carte1, Carte Carte2)
+        {
+            return (Carte1.valeurCarte < Carte2.valeurCarte);
+        }
     }
+
 }
