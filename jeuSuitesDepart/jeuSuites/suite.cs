@@ -73,7 +73,7 @@ namespace jeuSuites
                 }
                 else if(position < longueurSuite)
                 {
-                    suiteCartesModifiee[position] = suiteCartes[count];
+                    suiteCartesModifiee[position - 1] = suiteCartes[count];
                 }
                 else
                 {
@@ -86,15 +86,21 @@ namespace jeuSuites
 
         private void ViderLaSuiteModifiee()
         {
-            for (int cpt = 0; cpt < longueurSuite - 1; cpt++)
+            if (suiteCartesModifiee[0] == null)
             {
-                suiteCartesModifiee[cpt] = new Carte();
+                for (int cpt = 0; cpt < longueurSuite; cpt++)
+                {
+                    suiteCartesModifiee[cpt] = new Carte();
+                }
             }
         }
 
         public void ChangerPositions()
         {
-            suiteCartes = suiteCartesModifiee;
+            for (int cpt = 0; cpt < longueurSuite; cpt++)
+            {
+                suiteCartes[cpt] = suiteCartesModifiee[cpt];
+            }         
         }
     }
 
