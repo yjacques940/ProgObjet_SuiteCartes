@@ -86,13 +86,10 @@ namespace jeuSuites
 
         private void ViderLaSuiteModifiee()
         {
-            if (suiteCartesModifiee[0] == null)
-            {
                 for (int cpt = 0; cpt < longueurSuite; cpt++)
                 {
                     suiteCartesModifiee[cpt] = new Carte();
                 }
-            }
         }
 
         public void ChangerPositions()
