@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,6 +96,7 @@ namespace jeuSuites
             leJeuDeSuite.MinuterieTerminee();
             VerifierFinExecution();
             AfficherInformations();
+            viderLesTextBoxPositions()
         }
 
         public void AfficherLesPointsDuJoueur()
@@ -156,6 +157,15 @@ namespace jeuSuites
                 MessageBox.Show("Une des positions entrées n'est pas valide!(doit être entre 1 et 5)");
             }
             AfficherLesCartes();
+        }
+
+        private void viderLesTextBoxPositions()
+        {
+            firstPositionTextBox.Text = "";
+            secondPositionTextBox.Text = "";
+            thirdPositionTextBox.Text = "";
+            fourthPositionTextBox.Text = "";
+            fifthPositionTextBox.Text = "";
         }
 
         private List<string> GetNouvelOrdreDeLaSuite()
