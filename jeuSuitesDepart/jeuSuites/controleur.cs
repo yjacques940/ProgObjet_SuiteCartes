@@ -115,5 +115,45 @@ namespace jeuSuites
         {
              return suiteModele.VerifierSiSuiteEnOrdre();
         }
+
+        internal void ModifierPositions(List<string> positions)
+        {
+            suiteModele.ChangerPositionDesCartes(positions);
+            suiteModele.ChangerPositions();
+        }
+
+        internal bool PositionsAreInRange(List<string> positions)
+        {
+            if (ArePositionsInRange(positions))
+            {
+                ModifierPositions(positions);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool ArePositionsInRange(List<string> positions)
+        {
+            foreach (var position in positions)
+            {
+                if(position == string.Empty)
+                {
+                    return false;
+                }
+                else
+                {
+                    var positionInInteger = Int32.Parse(position);
+                    if (positionInInteger < 6 && positionInInteger > 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+           return false;
+        }
+
     }
 }

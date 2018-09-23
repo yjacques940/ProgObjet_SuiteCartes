@@ -20,7 +20,6 @@ namespace jeuSuites
             leJeuDeSuite = new Controleur();
             AbonnerEvenement();
             leJeuDeSuite.GenererNouvelleSuite();
-            CacherControles();
             AfficherInformations();
         }
 
@@ -129,6 +128,10 @@ namespace jeuSuites
             {
                 AnnoncerSuitePasEnOrdre();
             }
+            else
+            {
+                leJeuDeSuite.GenererNouvelleSuite();
+            }
         }
 
         public void AnnoncerSuitePasEnOrdre()
@@ -137,5 +140,35 @@ namespace jeuSuites
             handInOrderLabel.Text = "Cette suite n'est pas en ordre";
             handInOrderLabel.ForeColor = Color.Red;
         }
+
+        private void leJeuDeSuiteForm_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bienvenue sur le jeu de suite de cartes! Modifiez la position des cartes" +
+                            " en écrivant le numéro de la position que vous voulez mettre. Par la suite, cliquez sur " +
+                            "vérifiez la suite et si votre suite est valide, vous obtiendrez des points. Bon jeu!");
+        }
+
+        private void modifyPositionsButton_Click(object sender, EventArgs e)
+        {
+             var positions = GetNouvelOrdreDeLaSuite();
+            if (!leJeuDeSuite.PositionsAreInRange(positions))
+            {
+                MessageBox.Show("Une des positions entrées n'est pas valide!(doit être entre 1 et 5)");
+            }
+            AfficherLesCartes();
+        }
+
+        private List<string> GetNouvelOrdreDeLaSuite()
+        {
+            var positions = new List<string>();
+            positions.Clear();
+            positions.Add(firstPositionTextBox.Text);
+            positions.Add(secondPositionTextBox.Text);
+            positions.Add(thirdPositionTextBox.Text);
+            positions.Add(fourthPositionTextBox.Text);
+            positions.Add(fifthPositionTextBox.Text);
+            return positions;
+        }
     }
 }
+

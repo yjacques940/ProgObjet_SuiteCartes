@@ -12,6 +12,7 @@ namespace jeuSuites
         static Random generateurSuite = new Random();
 
         Carte[] suiteCartes = new Carte[longueurSuite];
+        Carte[] suiteCartesModifiee = new Carte[longueurSuite];
 
         public delegate void PointsSuiteReussiEventHandler(Object sender, PointsSuiteReussiEventArgs e);
         public event PointsSuiteReussiEventHandler SuiteReussie;
@@ -52,6 +53,48 @@ namespace jeuSuites
                 SuiteReussie(this, new PointsSuiteReussiEventArgs(suiteCartes));                
             }
             return enOrdre;
+        }
+
+        internal int GetLongueurSuite()
+        {
+            return longueurSuite;
+        }
+
+        public void ChangerPositionDesCartes(List<string> positions)
+        {
+            ViderLaSuiteModifiee();
+            var count = 0;
+            foreach (var newPosition in positions)
+            {
+                var position = Int32.Parse(newPosition);
+                if(suiteCartesModifiee[position-1] == null)
+                {
+                    suiteCartesModifiee[position - 1] = suiteCartes[count];
+                }
+                else if(position < longueurSuite)
+                {
+                    suiteCartesModifiee[position] = suiteCartes[count];
+                }
+                else
+                {
+                    suiteCartesModifiee[longueurSuite-1] = suiteCartes[count];
+                }
+                
+                count++;
+            }
+        }
+
+        private void ViderLaSuiteModifiee()
+        {
+            for (int cpt = 0; cpt < longueurSuite - 1; cpt++)
+            {
+                suiteCartesModifiee[cpt] = new Carte();
+            }
+        }
+
+        public void ChangerPositions()
+        {
+            suiteCartes = suiteCartesModifiee;
         }
     }
 
